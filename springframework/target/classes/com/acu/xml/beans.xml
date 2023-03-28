@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<bean id="persona" class="com.acu.beans.Persona" >
-		<constructor-arg value="1"></constructor-arg>
-		<constructor-arg value="Alejandro"></constructor-arg>
-		<constructor-arg value="Ale"></constructor-arg>
+		<constructor-arg  index="1" value="Alejandro"></constructor-arg>
+		<constructor-arg index="0" type="int" value="1"></constructor-arg>
+		<constructor-arg type="String" value="Ale"></constructor-arg>
 	</bean>
 	
 </beans>
