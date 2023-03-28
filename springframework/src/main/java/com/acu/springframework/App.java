@@ -2,12 +2,7 @@ package com.acu.springframework;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.acu.beans.AppConfig;
-import com.acu.beans.AppConfig2;
-import com.acu.beans.Mundo;
 import com.acu.beans.Persona;
 
 public class App {
