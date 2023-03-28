@@ -1,7 +1,4 @@
 package com.acu.springframework;
-
-import java.util.Iterator;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
