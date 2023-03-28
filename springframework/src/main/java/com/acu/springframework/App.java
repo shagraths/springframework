@@ -12,7 +12,7 @@ public class App {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/acu/xml/beans.xml");
 		// Patron de diseño factory donde pasamos un id y nos devuelve la isntancia de
 		// un objeto en particular
-		Persona per = (Persona) appContext.getBean("persona");
+		Persona per = (Persona) appContext.getBean("personaBeanAlias");
 		System.out
 				.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre()+ " " + per.getPais().getCiudad().getNombre());
 		((ConfigurableApplicationContext) appContext).close();
