@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
- @Bean
+	@Bean
 	public Mundo mundoAppConfig() {
-	 return new Mundo();
- }
+		return new Mundo();
+	}
 }
