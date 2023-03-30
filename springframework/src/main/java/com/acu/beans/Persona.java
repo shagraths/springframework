@@ -1,9 +1,13 @@
 package com.acu.beans;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-public class Persona {
+public class Persona implements InitializingBean, DisposableBean{
+	
 	private int id;
 	private String nombre;
 	private String apodo;
@@ -11,7 +15,7 @@ public class Persona {
 	private Pais pais;
 	private Ciudad ciudad;
 
-	@PostConstruct
+	/*@PostConstruct
 	private void init() {
 		System.out.println("Antes de inicializar el bean");
 	}
@@ -19,7 +23,7 @@ public class Persona {
 	@PreDestroy
 	private void destroy() {
 		System.out.println("Bean a punto de ser destruido");
-	}
+	}*/
 
 	public Pais getPais() {
 		return pais;
@@ -33,6 +37,7 @@ public class Persona {
 		return id;
 	}
 
+	
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -61,4 +66,17 @@ public class Persona {
 		this.ciudad = ciudad;
 	}
 
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Antes de inicializar el bean");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Bean a punto de ser destruido");
+	}
+
+	
 }
