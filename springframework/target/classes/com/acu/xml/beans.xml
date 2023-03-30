@@ -2,10 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="persona" class="com.acu.beans.Persona" autowire="byName">	
-		<property name="id" value="1"></property>
-		<property name="nombre" value="Alejandro"></property>
-		<property name="apodo" value="Ale"></property>
+	<bean id="persona" class="com.acu.beans.Persona" autowire="byName" scope="prototype">	
 	</bean>
 	<bean id="pais" class="com.acu.beans.Pais">
 		<property name="nombre" value="Chile"></property>		

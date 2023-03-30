@@ -14,9 +14,18 @@ public class App {
 		// Patron de diseño factory donde pasamos un id y nos devuelve la isntancia de
 		// un objeto en particular
 		Persona per = (Persona) appContext.getBean("persona");
-	
+		Persona per2 = (Persona) appContext.getBean("persona");
+		per.setId(1);
+		per.setNombre("Alejandro");
+		per.setApodo("Ale");
+		
+		System.out.println(per);
+		System.out.println(per2);
+		
 		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre()
 				+ " " + per.getCiudad().getNombre());
+		System.out.println(per2.getId() + " " + per2.getNombre() + " " + per2.getApodo() + " " + per2.getPais().getNombre()
+				+ " " + per2.getCiudad().getNombre());
 		((ConfigurableApplicationContext) appContext).close();
 	}
 
