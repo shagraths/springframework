@@ -1,5 +1,8 @@
 package com.acu.beans;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 public class Persona {
 	private int id;
 	private String nombre;
@@ -8,10 +11,12 @@ public class Persona {
 	private Pais pais;
 	private Ciudad ciudad;
 
+	@PostConstruct
 	private void init() {
 		System.out.println("Antes de inicializar el bean");
 	}
 
+	@PreDestroy
 	private void destroy() {
 		System.out.println("Bean a punto de ser destruido");
 	}
