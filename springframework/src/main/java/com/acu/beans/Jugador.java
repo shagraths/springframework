@@ -1,6 +1,7 @@
 package com.acu.beans;
 
 import com.acu.interfaces.IEquipo;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Jugador {
 	private int numero;
@@ -18,7 +19,7 @@ public class Jugador {
 	public String getNombre() {
 		return nombre;
 	}
-
+	@Autowired
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -27,6 +28,7 @@ public class Jugador {
 		return equipo;
 	}
 
+	@Autowired
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
