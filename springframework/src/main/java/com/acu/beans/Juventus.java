@@ -1,8 +1,11 @@
 package com.acu.beans;
 
+import org.springframework.stereotype.Component;
+
 import com.acu.interfaces.IEquipo;
 
-public class Juventus implements IEquipo{
+@Component
+public class Juventus implements IEquipo {
 
 	@Override
 	public String mostrar() {
