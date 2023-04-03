@@ -1,26 +1,19 @@
 package com.acu.beans;
 
 import com.acu.interfaces.IEquipo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component("messi")
 public class Jugador {
-	private int numero;
-	@Value("Messi Lionel")
+	private int id;
 	private String nombre;
-	@Autowired
-	// @Qualifier("barcelonaQualifier")
 	private IEquipo equipo;
+	private Camiseta camiseta;
 
-	public int getNumero() {
-		return numero;
+	public int getId() {
+		return id;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -38,4 +31,13 @@ public class Jugador {
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
+
+	public Camiseta getCamiseta() {
+		return camiseta;
+	}
+
+	public void setCamiseta(Camiseta camiseta) {
+		this.camiseta = camiseta;
+	}
+
 }
