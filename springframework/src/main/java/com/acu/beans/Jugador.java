@@ -2,15 +2,17 @@ package com.acu.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.acu.interfaces.IEquipo;
 @Component
 public class Jugador {
 	private int id;
+	@Value("Alejandro")
 	private String nombre;
 	@Autowired
-	@Qualifier("juventus")
+	@Qualifier("barcelona")
 	private IEquipo equipo;
 	@Autowired
 	private Camiseta camiseta;
