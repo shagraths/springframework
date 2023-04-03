@@ -2,10 +2,13 @@ package com.acu.beans;
 
 import com.acu.interfaces.IEquipo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Jugador {
-	private int numero;
-	private String nombre;
+	private int numero;	
+	private String nombre;	
+	@Autowired
+	@Qualifier("barcelonaQualifier")
 	private IEquipo equipo;
 
 	public int getNumero() {
@@ -27,8 +30,7 @@ public class Jugador {
 	public IEquipo getEquipo() {
 		return equipo;
 	}
-
-	@Autowired
+	
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
