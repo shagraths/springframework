@@ -4,17 +4,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.acu.beans.Ciudad;
-import com.acu.beans.Persona;
+import com.acu.interfaces.IEquipo;
 
 public class App {
 
 	public static void main(String[] args) {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/acu/xml/beans.xml");
-		Persona per = (Persona) appContext.getBean("persona");
-		System.out.println(per.getApodo());
-		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
-		System.out.println(ciu.getNombre());
+		//Jugador jug = (Jugador) appContext.getBean("messi");
+		//System.out.println(jug.getNombre() + "-" + jug.getEquipo().mostrar());
+		
+		IEquipo equi = (IEquipo) appContext.getBean("juventus");
+		System.out.println(equi.mostrar());
 		((ConfigurableApplicationContext) appContext).close();
 	}
 
