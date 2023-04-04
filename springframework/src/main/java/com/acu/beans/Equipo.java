@@ -1,7 +1,6 @@
 package com.acu.beans;
 
-public class Marca {
-
+public class Equipo {
 	private int id;
 	private String nombre;
 
