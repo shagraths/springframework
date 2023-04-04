@@ -5,13 +5,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<context:component-scan base-package="com.acu"></context:component-scan>
+	<context:property-placeholder location="classpath:valores.properties" />
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3406/springdb"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="123456qwerty"></property>
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${usuario}"></property>
+		<property name="password" value="${clave}"></property>
 	</bean>
-	
 	<bean id="marca1" class="com.acu.beans.Marca">
 		<property name="id" value="1"></property>
 		<property name="nombre" value="ADIDAS"></property>
